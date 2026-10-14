@@ -65,8 +65,30 @@ Checked 13–14 October 2026.
 5. **The flounder story** in `about.html` is written as a guess at why the shop
    is called Flatfish. Worth replacing with the real reason.
 
+## Deploying
+
+Repo: <https://github.com/michaeljpreviti-ops/flatfish-site>
+
+The Vercel project is connected to that repo, so **pushing to `main` deploys**.
+Nothing to run by hand:
+
+```sh
+OUTDIR=. python3 src/gen.py     # only if you changed src/
+git commit -am "..." && git push
+```
+
+Import settings, if the project is ever recreated: framework **Other**, no build
+command, output directory the repo root. `vercel.json` handles clean URLs and
+image caching.
+
+`src/deploy.py` is a fallback that pushes the folder straight to Vercel's REST
+API without Node or the CLI — it needs `$VERCEL_TOKEN` or `~/.vercel_token`:
+
+```sh
+python3 src/deploy.py flatfish-gnv
+```
+
 ## Before it goes live
 
 - Set `SITE_URL` in `src/content.py` to the real domain and rebuild. While it is
   empty the pages deliberately ship no `canonical`/`og:url`.
-- `vercel.json` is ready for `vercel deploy` (clean URLs, cached images).
