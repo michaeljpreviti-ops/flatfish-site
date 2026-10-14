@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flavours — Flatfish GNV</title>
+<meta name="description" content="This fortnight's board at Flatfish GNV: cream-filled brioche, the savoury Dagel, and the year-round plant-based glazed line.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flavours — Flatfish GNV">
+<meta property="og:description" content="This fortnight's board at Flatfish GNV: cream-filled brioche, the savoury Dagel, and the year-round plant-based glazed line.">
+<meta property="og:image" content="img/hero-cherry.jpg">
+<meta name="theme-color" content="#F89F24">
+<link rel="icon" href="img/flounder.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>/* Flatfish GNV — stylesheet.
+   Palette and letterforms are taken from the shop's own flavour poster:
+   orange #F89F24 fill, black engraved flounder, warm paper. */
+
+:root{
+  --orange:#F89F24;
+  --orange-deep:#C46A04;
+  --orange-soft:#FECD81;
+  --ink:#171310;
+  --ink-2:#4A3F34;
+  --ink-3:#7A6B5B;
+  --paper:#FFFFFF;
+  --cream:#FFF7E8;
+  --cream-2:#FDEFD8;
+  --line:#E9DCC4;
+  --green:#2F7D4F;
+
+  --f-display:'Lilita One',Impact,'Haettenschweiler','Arial Narrow Bold',sans-serif;
+  --f-head:'Fraunces',Georgia,'Times New Roman',serif;
+  --f-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+
+  --wrap:1180px;
+  --r:14px;
+  --shadow:0 1px 2px rgba(23,19,16,.06),0 8px 24px -12px rgba(23,19,16,.18);
+  --shadow-lg:0 2px 4px rgba(23,19,16,.06),0 24px 48px -20px rgba(23,19,16,.28);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--f-body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+/* every inline icon is 1em unless a component says otherwise */
+svg{width:1em;height:1em;fill:currentColor;flex:none}
+.eyebrow svg{vertical-align:-.14em;margin-right:.25em}
+a{color:var(--orange-deep);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+h1,h2,h3,h4{font-family:var(--f-head);font-weight:600;line-height:1.1;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(2.5rem,6vw,4.1rem);font-variation-settings:'SOFT' 20,'WONK' 1}
+h2{font-size:clamp(1.85rem,3.6vw,2.7rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1rem}
+blockquote{margin:0}
+[id]{scroll-margin-top:90px}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1rem;z-index:99}
+.skip:focus{left:8px;top:8px}
+:focus-visible{outline:3px solid var(--orange-deep);outline-offset:2px;border-radius:4px}
+
+/* ---------------------------------------------------------------- bits */
+.eyebrow{
+  font-family:var(--f-display);font-size:.84rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--orange-deep);margin:0 0 .6rem;
+}
+.lede{font-size:1.14rem;color:var(--ink-2);max-width:62ch}
+.sec{padding:clamp(3rem,7vw,5.5rem) 0}
+.sec--paper{background:var(--paper)}
+.sec--ink{background:var(--ink);color:var(--cream)}
+.sec--ink h2,.sec--ink h3{color:#fff}
+.sec--ink .lede{color:#D9CBB6}
+.sec--ink .eyebrow{color:var(--orange)}
+.sec--ink p,.sec--ink .step p,.sec--ink .card__body p{color:#D9CBB6}
+.sec--ink .note{background:#231D19;border-color:var(--orange);color:#D9CBB6}
+.sec--ink .note strong{color:#fff}
+.sec--ink .card{background:#231D19;border-color:#4A3F34}
+.sec--ink .card__tag{background:#2C2520;border-color:#4A3F34;color:#D9CBB6}
+.sec--ink .step h3{color:#fff}
+.sec__head{max-width:68ch;margin-bottom:2.2rem}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
+  font-family:var(--f-body);font-weight:650;font-size:1rem;line-height:1;
+  padding:.92rem 1.5rem;border-radius:999px;border:2px solid transparent;
+  text-decoration:none;cursor:pointer;transition:transform .12s ease,background .12s ease,color .12s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:1.1em;height:1.1em;fill:currentColor;flex:none}
+.btn--orange{background:var(--orange);color:var(--ink);border-color:var(--ink)}
+.btn--orange:hover{background:var(--orange-soft);color:var(--ink)}
+.btn--ink{background:var(--ink);color:#fff}
+.btn--ink:hover{background:var(--orange-deep);color:#fff}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:#fff}
+.btn--onink{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn--onink:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn--sm{padding:.6rem 1.05rem;font-size:.92rem}
+.btn--lg{padding:1.05rem 1.9rem;font-size:1.08rem}
+.btnrow{display:flex;flex-wrap:wrap;gap:.7rem}
+
+.chip{
+  display:inline-flex;align-items:center;gap:.45rem;
+  background:var(--cream-2);border:1px solid var(--line);color:var(--ink-2);
+  padding:.4rem .8rem;border-radius:999px;font-size:.88rem;font-weight:600;
+}
+.chip svg{width:1em;height:1em;fill:currentColor}
+.chip--open{background:#E7F4EC;border-color:#BFE0CC;color:#1F6340}
+.chip--shut{background:#FBEDE7;border-color:#F0CFBF;color:#A2421A}
+
+/* ------------------------------------------------------------ topbar */
+.topbar{
+  background:var(--ink);color:#EADFCB;font-size:.86rem;
+}
+.topbar__in{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;padding-block:.5rem}
+.topbar__i{display:inline-flex;align-items:center;gap:.4rem}
+.topbar__i svg{width:1em;height:1em;fill:var(--orange)}
+.topbar a{color:#EADFCB;text-decoration:none}
+.topbar a:hover{color:#fff;text-decoration:underline}
+.topbar__sp{flex:1 1 auto}
+@media (max-width:620px){
+  .topbar__in{gap:.8rem;justify-content:space-between}
+  .topbar__i:first-child{display:none}
+}
+
+/* -------------------------------------------------------------- mast */
+.mast{
+  position:sticky;top:0;z-index:50;background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.mast__in{display:flex;align-items:center;gap:1rem;padding-block:.75rem}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--ink);flex:none}
+.brand img{width:76px;height:auto}
+.brand__txt{display:flex;flex-direction:column;line-height:.92}
+.brand__a{font-family:var(--f-display);font-size:1.42rem;letter-spacing:.01em;color:var(--orange);
+  -webkit-text-stroke:1.6px var(--ink);paint-order:stroke fill}
+.brand__b{font-family:var(--f-display);font-size:.78rem;letter-spacing:.2em;color:var(--ink-2)}
+.mast__sp{flex:1 1 auto}
+.nav{display:flex;gap:.2rem;align-items:center}
+.nav a{
+  font-weight:600;font-size:.98rem;color:var(--ink);text-decoration:none;
+  padding:.5rem .78rem;border-radius:999px;
+}
+.nav a:hover{background:var(--cream-2)}
+.nav a[aria-current="page"]{background:var(--ink);color:#fff}
+.navtoggle{
+  display:none;align-items:center;gap:.45rem;background:var(--ink);color:#fff;border:0;
+  font:inherit;font-weight:650;font-size:.95rem;padding:.55rem 1rem;border-radius:999px;cursor:pointer;
+}
+.navtoggle svg{width:1.1em;height:1.1em;fill:currentColor}
+
+@media (max-width:940px){
+  .mast__in{flex-wrap:wrap}
+  .navtoggle{display:inline-flex;order:3}
+  .nav{
+    order:4;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;
+    display:none;padding-bottom:.6rem;
+  }
+  .nav.is-open{display:flex}
+  .nav a{padding:.8rem .9rem;border-radius:10px}
+  .mast__cta{order:2}
+}
+
+/* -------------------------------------------------------------- hero */
+.hero{background:var(--cream);padding:clamp(2.2rem,5vw,4rem) 0 clamp(2.6rem,6vw,4.6rem)}
+.hero__grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+.hero__kicker svg{width:1.05em;height:1.05em;fill:currentColor;flex:none}
+.hero__kicker{
+  display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;background:var(--ink);color:var(--orange);
+  font-family:var(--f-display);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.4rem .9rem;border-radius:999px;margin-bottom:1rem;
+}
+.hero h1{margin-bottom:.9rem}
+.hero h1 em{font-style:normal;color:var(--orange-deep)}
+.hero__sub{font-size:1.18rem;color:var(--ink-2);max-width:48ch;margin-bottom:1.4rem}
+.hero__meta{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.6rem}
+.hero__art{position:relative}
+.hero__art img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);
+  border:3px solid var(--ink);box-shadow:var(--shadow-lg);
+}
+.hero__badge{
+  position:absolute;left:-14px;bottom:26px;background:var(--paper);border:3px solid var(--ink);
+  border-radius:var(--r);padding:.8rem 1rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.7rem;
+}
+.hero__badge b{font-family:var(--f-display);font-size:1.9rem;line-height:1;display:block}
+.hero__badge span{font-size:.8rem;color:var(--ink-3);line-height:1.25;display:block}
+.stars{display:inline-flex;gap:1px}
+.stars svg{width:15px;height:15px;fill:var(--orange)}
+.stars svg.off{fill:#DCCEB6}
+
+@media (max-width:880px){
+  .hero__grid{grid-template-columns:1fr}
+  .hero__art{order:-1}
+  .hero__art img{aspect-ratio:3/2}
+  .hero__badge{left:auto;right:12px;bottom:-18px}
+}
+
+/* ------------------------------------------------------------ ribbon */
+.ribbon{background:var(--orange);border-block:3px solid var(--ink);overflow:hidden}
+.ribbon__in{
+  display:flex;gap:2.4rem;padding-block:.62rem;white-space:nowrap;
+  font-family:var(--f-display);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);
+}
+.ribbon__in span{display:inline-flex;align-items:center;gap:2.4rem}
+.ribbon__in span::after{content:"\2022";opacity:.45}
+
+/* -------------------------------------------------------------- cards */
+.grid{display:grid;gap:1.4rem}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+@media (max-width:900px){.grid--3,.grid--4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid--3,.grid--4,.grid--2{grid-template-columns:1fr}}
+
+.card{
+  background:var(--paper);border:2px solid var(--ink);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);
+}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-bottom:2px solid var(--ink)}
+.card__body{padding:1.1rem 1.15rem 1.3rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.card__body h3{font-size:1.22rem}
+.card__body p{margin:0;color:var(--ink-2);font-size:.97rem}
+.card__tag{
+  align-self:flex-start;font-family:var(--f-display);font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--cream-2);border:1px solid var(--line);
+  padding:.2rem .6rem;border-radius:999px;color:var(--ink-2);
+}
+.card__tag--vegan{background:#E7F4EC;border-color:#BFE0CC;color:#1F6340}
+.card__tag--savory{background:#FDEFD8;border-color:var(--orange-soft);color:var(--orange-deep)}
+
+/* --------------------------------------------------------- flavour list */
+.flavours{display:grid;gap:0;border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.flav{display:flex;gap:1rem;padding:1.05rem 1.2rem;border-bottom:1px solid var(--line);align-items:baseline}
+.flav:last-child{border-bottom:0}
+.flav__n{font-family:var(--f-head);font-weight:600;font-size:1.12rem;flex:none;min-width:12.5rem}
+.flav__d{color:var(--ink-2);font-size:.98rem;flex:1}
+.flav__t{flex:none;align-self:center}
+@media (max-width:620px){
+  .flav{flex-wrap:wrap;gap:.3rem}
+  .flav__n{min-width:0;flex-basis:100%}
+}
+
+/* ----------------------------------------------------------- rating */
+.rating{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,4vw,3.4rem);align-items:center}
+.rating__score{text-align:center}
+.rating__num{font-family:var(--f-display);font-size:4.6rem;line-height:.9;color:var(--ink)}
+.rating__of{color:var(--ink-3);font-size:.9rem}
+.rating__bars{display:grid;gap:.4rem;width:100%}
+.bar{display:grid;grid-template-columns:2.6rem 1fr 3rem;gap:.6rem;align-items:center;font-size:.86rem;color:var(--ink-2)}
+.bar__t{height:9px;background:var(--cream-2);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.bar__f{height:100%;background:var(--orange);display:block}
+.bar__n{text-align:right;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.sec--ink .bar{color:#D9CBB6}
+.sec--ink .bar__t{background:#2C2520;border-color:#413830}
+.sec--ink .rating__num{color:#fff}
+.sec--ink .rating__of{color:#A99887}
+@media (max-width:700px){
+  .rating{grid-template-columns:1fr}
+  .rating__score{text-align:left}
+}
+
+/* ---------------------------------------------------------- reviews */
+.quotes{columns:3;column-gap:1.3rem}
+@media (max-width:980px){.quotes{columns:2}}
+@media (max-width:640px){.quotes{columns:1}}
+.quote{
+  break-inside:avoid;background:var(--paper);border:2px solid var(--ink);border-radius:var(--r);
+  padding:1.2rem 1.25rem;margin-bottom:1.3rem;box-shadow:var(--shadow);
+}
+.quote blockquote{margin:0}
+.quote p{font-size:1.02rem;color:var(--ink);margin-bottom:.9rem}
+.quote__who{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--ink-3);flex-wrap:wrap}
+.quote__av{
+  width:34px;height:34px;border-radius:50%;background:var(--orange);color:var(--ink);flex:none;
+  display:grid;place-items:center;font-family:var(--f-display);font-size:1rem;border:2px solid var(--ink);
+}
+.quote__nm{font-weight:650;color:var(--ink)}
+.quote .stars{margin-bottom:.6rem}
+
+/* ------------------------------------------------------------ photos */
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+.shots img{width:100%;aspect-ratio:1/1;object-fit:cover;border:2px solid var(--ink);border-radius:10px}
+.shots a{display:block;transition:transform .14s ease}
+.shots a:hover{transform:translateY(-3px)}
+.shots--tall img{aspect-ratio:4/5}
+@media (max-width:860px){.shots{grid-template-columns:repeat(2,1fr)}}
+
+/* -------------------------------------------------------------- split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3.2rem);align-items:center}
+.split img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;border:3px solid var(--ink);border-radius:var(--r);box-shadow:var(--shadow)}
+.split__art--board img{aspect-ratio:3/4}
+.split--flip .split__art{order:2}
+@media (max-width:820px){.split{grid-template-columns:1fr}.split--flip .split__art{order:0}}
+
+/* --------------------------------------------------------- hours table */
+.hours{width:100%;border-collapse:collapse;background:var(--paper);border:2px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.hours th,.hours td{text-align:left;padding:.72rem 1rem;border-bottom:1px solid var(--line);font-size:.98rem}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours th{font-weight:650;width:11rem}
+.hours td{color:var(--ink-2);text-align:right}
+.hours tr.is-today{background:var(--cream-2)}
+.hours tr.is-today th::after{content:" — today";color:var(--orange-deep);font-weight:650}
+.hours .shut{color:var(--ink-3)}
+
+/* ------------------------------------------------------------- steps */
+.steps{counter-reset:s;display:grid;gap:1rem}
+.step{display:flex;gap:1rem;align-items:flex-start}
+.step::before{
+  counter-increment:s;content:counter(s);flex:none;
+  width:2.3rem;height:2.3rem;border-radius:50%;background:var(--orange);border:2px solid var(--ink);
+  display:grid;place-items:center;font-family:var(--f-display);font-size:1.1rem;color:var(--ink);
+}
+.step h3{font-size:1.08rem;margin-bottom:.15rem}
+.step p{margin:0;color:var(--ink-2);font-size:.97rem}
+
+/* -------------------------------------------------------------- misc */
+.tagcloud{display:flex;flex-wrap:wrap;gap:.45rem}
+.tagcloud span{
+  background:var(--paper);border:1px solid var(--line);border-radius:999px;
+  padding:.32rem .78rem;font-size:.9rem;color:var(--ink-2);
+}
+.sec--ink .tagcloud span{background:#231D19;border-color:#3A312A;color:#D9CBB6}
+
+.note{
+  background:var(--cream-2);border:2px dashed var(--orange);border-radius:var(--r);
+  padding:1.1rem 1.25rem;font-size:.97rem;color:var(--ink-2);
+}
+.note strong{color:var(--ink)}
+
+.cta{background:var(--orange);border-block:3px solid var(--ink)}
+.cta .wrap{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between;padding-block:clamp(2rem,4vw,3rem)}
+.cta h2{max-width:20ch}
+.cta p{margin:0;color:#4A3312;max-width:42ch}
+
+.map{
+  width:100%;aspect-ratio:16/10;border:3px solid var(--ink);border-radius:var(--r);
+  filter:saturate(.9);
+}
+
+/* ------------------------------------------------------------- footer */
+.foot{background:var(--ink);color:#C9BAA5;padding:3.2rem 0 2rem;font-size:.95rem}
+.foot__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:2rem}
+@media (max-width:860px){.foot__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot__grid{grid-template-columns:1fr}}
+.foot h4{color:#fff;font-family:var(--f-display);font-size:.84rem;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:.8rem;font-weight:400}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.foot a{color:#C9BAA5;text-decoration:none}
+.foot a:hover{color:var(--orange);text-decoration:underline}
+.foot__brand img{width:150px;filter:invert(1);opacity:.92;margin-bottom:.8rem}
+.foot__wm{font-family:var(--f-display);font-size:1.5rem;color:var(--orange);line-height:1;margin-bottom:.5rem}
+.foot__bar{
+  margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid #312A24;
+  display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;font-size:.86rem;color:#8C7E6E;
+}
+.soc{display:flex;gap:.5rem;margin-top:.9rem}
+.soc a{
+  width:38px;height:38px;border-radius:50%;border:1px solid #3A312A;display:grid;place-items:center;
+}
+.soc a:hover{background:var(--orange);border-color:var(--orange)}
+.soc svg{width:18px;height:18px;fill:#C9BAA5}
+.soc a:hover svg{fill:var(--ink)}
+
+/* ---------------------------------------------------------- page head */
+.phead{background:var(--ink);color:var(--cream);padding:clamp(2.4rem,5vw,3.8rem) 0}
+.phead h1{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.6rem}
+.phead p{color:#D9CBB6;font-size:1.12rem;max-width:58ch;margin:0}
+.phead .eyebrow{color:var(--orange)}
+.crumb{font-size:.86rem;color:#9C8C7A;margin-bottom:1rem}
+.crumb a{color:#9C8C7A;text-decoration:none}
+.crumb a:hover{color:var(--orange)}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Flatfish GNV","image":"img/hero-cherry.jpg","address":{"@type":"PostalAddress","streetAddress":"308 NW 5th Ave","addressLocality":"Gainesville","addressRegion":"FL","postalCode":"32601","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":29.6557358,"longitude":-82.3282616},"servesCuisine":"Doughnuts","priceRange":"$","sameAs":["https://www.instagram.com/flatfish_gnv/","https://www.facebook.com/FlatFishGNV/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"185"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"13:30"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><div class="wrap topbar__in">
+  <span class="topbar__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> 308 NW 5th Ave, Gainesville</span>
+  <span class="topbar__i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.9 10.6-3.6 2.3-.8-1.3 3-1.9V6.5h1.4v6.1z"/></svg> Saturday &amp; Sunday, 10am – 1:30pm or sellout</span>
+  <span class="topbar__sp"></span>
+  <a class="topbar__i" href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.8A6 6 0 1 0 12 18a6 6 0 0 0 0-12zm0 9.9A3.9 3.9 0 1 1 12 8.2a3.9 3.9 0 0 1 0 7.7zm7.6-10.3a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg> @flatfish_gnv</a>
+</div></div>
+<header class="mast"><div class="wrap mast__in">
+  <a class="brand" href="index.html" aria-label="Flatfish GNV — home">
+    <img src="img/flounder.png" alt="" width="1129" height="311">
+    <span class="brand__txt">
+      <span class="brand__a">FLATFISH</span>
+      <span class="brand__b">DOUGHNUTS</span>
+    </span>
+  </a>
+  <span class="mast__sp"></span>
+  <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> Menu</button>
+  <nav class="nav" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="menu.html" aria-current="page">Flavours</a><a href="reviews.html">Reviews</a><a href="visit.html">Visit</a><a href="about.html">Our Story</a></nav>
+</div></header>
+<main id="main">
+
+<section class="phead"><div class="wrap">
+  <p class="crumb"><a href="index.html">Home</a> &rsaquo; Flavours</p>
+  <p class="eyebrow">The board</p>
+  <h1>Flavours</h1>
+  <p>Flatfish change every filled doughnut on a two-week rotation. The plant-based glazed
+     line stays, mostly. Here is what that looks like.</p>
+</div></section>
+
+<section class="sec sec--paper"><div class="wrap">
+  <div class="split" style="margin-bottom:2.4rem">
+    <div>
+      <p class="eyebrow">Brioche filled &middot; October 2 – 18</p>
+      <h2>On the board right now.</h2>
+      <p class="lede">Flatfish change every filled flavour on a two-week rotation — four sweet and one savoury. The list below is the current board.</p>
+    </div>
+    <div class="split__art split__art--board">
+      <img src="img/grid-autumn.jpg" alt="Four of this fortnight's filled flavours in their trays"
+           loading="lazy" width="1400" height="1857">
+    </div>
+  </div>
+  <div class="flavours"><div class="flav"><div class="flav__n">Chocolate Velvet</div><div class="flav__d">Rich chocolate cream with house-made crème fraîche and Callebaut 55% dark chocolate.</div></div><div class="flav"><div class="flav__n">Lemon Curd</div><div class="flav__d">Strong, tart fresh lemon curd over a light vanilla filling.</div></div><div class="flav"><div class="flav__n">Pecan Praline</div><div class="flav__d">Pecans caramelised with vanilla, folded into whipped pastry cream.</div></div><div class="flav"><div class="flav__n">Butternut Squash</div><div class="flav__d">Roasted and puréed smooth with honey custard cream and nutmeg.</div></div><div class="flav"><div class="flav__n">Scallion Dagel</div><div class="flav__d">Whipped cream cheese, scallions and everything seasoning. Savoury, not sweet.</div><span class="card__tag card__tag--savory flav__t">Savoury</span></div></div>
+
+  <div class="note" style="margin-top:1.6rem">
+    <strong>Rotation, not a fixed menu.</strong> This list turns over roughly every two
+    weeks. Instagram <a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener">@flatfish_gnv</a> always has
+    the current board first.
+  </div>
+</div></section>
+
+<section class="sec" id="glazed"><div class="wrap">
+  <div class="sec__head">
+    <p class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3C9 3 4 8.5 4 15c0 2 .6 3.7 1.6 5L4 21.6 5.4 23l1.7-1.7C8.4 22.4 10.1 23 12 23c6.5 0 12-5 12-16 0-2-2-4-4-4zM12 21c-1.4 0-2.6-.4-3.5-1.1l9-9-1.4-1.4-9 9A5.9 5.9 0 0 1 6 15c0-5.3 4-10 14-10 1 0 2 1 2 2 0 10-4.7 14-10 14z"/></svg> Plant-based glazed</p>
+    <h2>The vegan line.</h2>
+    <p class="lede">No egg, no dairy — a denser doughnut with a proper chew, glazed rather
+       than filled. These six are the year-round core.</p>
+  </div>
+  <div class="flavours"><div class="flav"><div class="flav__n">Salted Brown Butter</div><div class="flav__d">Toasted vegan butter, salted, with vanilla. Their signature glazed.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Cardamom Sugar</div><div class="flav__d">A classic sugar doughnut tossed with cardamom and a lil' cinnamon.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Thicc Chocolate</div><div class="flav__d">Rich chocolate glaze with cocoa powder and dark chocolate.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Pink Sprinkles</div><div class="flav__d">Sprinkle doughnut with a fresh raspberry glaze.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Passionfruit</div><div class="flav__d">Passionfruit nectar glaze. Tart and citrusy.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Hummingbird</div><div class="flav__d">Banana and pineapple glaze with candied pecans. Like the cake.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div></div>
+
+  <h3 style="margin:2.2rem 0 1rem">New for autumn</h3>
+  <div class="flavours"><div class="flav"><div class="flav__n">Sour Pomegranate</div><div class="flav__d">Fresh pomegranate glaze with a lemon drizzle — earthy, then bright.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Biscoff Cookie Butter</div><div class="flav__d">The classic cookie puréed with vegan butter and pie spice.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div><div class="flav"><div class="flav__n">Cherry Chocolate</div><div class="flav__d">Summer cherry preserves folded into the Thicc Chocolate glaze.</div><span class="card__tag card__tag--vegan flav__t">Plant-based</span></div></div>
+</div></section>
+
+<section class="sec sec--paper" id="dagel"><div class="wrap split split--flip">
+  <div class="split__art">
+    <img src="img/dagel.jpg" alt="A Dagel — brioche with cream cheese, scallions and everything seasoning"
+         loading="lazy" width="919" height="511">
+  </div>
+  <div>
+    <p class="eyebrow">The savoury one</p>
+    <h2>The Dagel.</h2>
+    <p class="lede">A doughnut that thinks it is a bagel. The same brioche, filled with
+       whipped cream cheese and scallions and finished with everything seasoning —
+       savoury, not sweet, and lighter than the bagel it is impersonating.</p>
+    <p>There is one savoury slot on every board. Past versions have included Smoked Salmon,
+       Elote and Pimento Cheese.</p>
+  </div>
+</div></section>
+
+<section class="sec sec--ink" id="past"><div class="wrap split split--flip">
+  <div class="split__art split__art--board">
+    <img src="img/grid-summer.jpg" alt="Four flavours from an earlier summer board"
+         loading="lazy" width="1400" height="1858">
+  </div>
+  <div>
+    <p class="eyebrow">The archive</p>
+    <h2>Flavours they&rsquo;ve run.</h2>
+    <p class="lede">A year or so of boards, to give you a sense of the range. Any of these
+       can come back around.</p>
+    <div class="tagcloud" style="margin-top:1.4rem"><span>Banana Puddin'</span><span>Tiramisu</span><span>Fruity Pebbles</span><span>Orange Creamsicle</span><span>Earl Grey</span><span>Peaches n' Cream</span><span>Snickerdoodle</span><span>Piña Colada</span><span>Pistachio</span><span>Strawberry Cream</span><span>Chocolate Brownie</span><span>Honey Caramel</span><span>Salted Pistachio</span><span>Elote Dagel</span><span>Smoked Salmon Dagel</span><span>Pimento Cheese</span><span>Mango Lime</span><span>PB&amp;J</span><span>Cold Brew Coffee</span><span>Fresh Cherry</span><span>Blueberry Buttermilk</span><span>Salted Watermelon</span><span>Bananas Foster</span><span>Raspberry Cream</span><span>Maritozzi</span></div>
+  </div>
+</div></section>
+
+<section class="sec sec--paper"><div class="wrap">
+  <div class="sec__head">
+    <p class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.8A6 6 0 1 0 12 18a6 6 0 0 0 0-12zm0 9.9A3.9 3.9 0 1 1 12 8.2a3.9 3.9 0 0 1 0 7.7zm7.6-10.3a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg> From the case</p>
+    <h2>What they look like.</h2>
+  </div>
+  <div class="shots"><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-chocolate-velvet.jpg" alt="A tray of Chocolate Velvet brioche doughnuts" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-lemon-curd.jpg" alt="Lemon Curd doughnuts, filling piped on top" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-pecan-praline.jpg" alt="Pecan Praline doughnuts in their tray" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-butternut-squash.jpg" alt="Butternut Squash doughnuts dusted with sugar" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-strawberry-cream.jpg" alt="Strawberry Cream doughnuts topped with fresh fruit" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-pistachio.jpg" alt="Pistachio doughnuts with chopped nuts on the cream" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-chocolate-brownie.jpg" alt="Chocolate Brownie doughnuts, each with a brownie on top" loading="lazy" width="700" height="700"></a><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><img src="img/f-honey-caramel.jpg" alt="Honey Caramel doughnuts with honeycomb candy" loading="lazy" width="700" height="700"></a></div>
+</div></section>
+
+</main>
+<section class="cta"><div class="wrap">
+  <div>
+    <h2>Weekends only. Until they&rsquo;re gone.</h2>
+    <p>Doors at 10am Saturday and Sunday. The board changes every two weeks — Instagram has
+       what&rsquo;s on it right now.</p>
+  </div>
+  <div class="btnrow">
+    <a class="btn btn--ink btn--lg" href="https://www.google.com/maps/dir/?api=1&destination=Flatfish+GNV+308+NW+5th+Ave+Gainesville+FL+32601" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 11.3 12.7 2.3a1 1 0 0 0-1.4 0l-9 9a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4zM13 15v-2.5h-3V15l-3-3.5L10 8v2.5h4V15h-1z"/></svg> Get directions</a>
+    <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.8A6 6 0 1 0 12 18a6 6 0 0 0 0-12zm0 9.9A3.9 3.9 0 1 1 12 8.2a3.9 3.9 0 0 1 0 7.7zm7.6-10.3a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg> See this week</a>
+  </div>
+</div></section>
+<footer class="foot"><div class="wrap">
+  <div class="foot__grid">
+    <div class="foot__brand">
+      <img src="img/flounder.png" alt="" width="1129" height="311">
+      <div class="foot__wm">FLATFISH DOUGHNUTS</div>
+      <p>From-scratch doughnuts, cream filled brioche and vegan glazed.</p>
+      <p>308 NW 5th Ave<br>Gainesville, FL 32601</p>
+      <div class="soc">
+        <a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener" aria-label="Flatfish GNV on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.8A6 6 0 1 0 12 18a6 6 0 0 0 0-12zm0 9.9A3.9 3.9 0 1 1 12 8.2a3.9 3.9 0 0 1 0 7.7zm7.6-10.3a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/></svg></a>
+        <a href="https://www.facebook.com/FlatFishGNV/" target="_blank" rel="noopener" aria-label="Flatfish GNV on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://www.google.com/maps/place/Flatfish+GNV+(Doughnuts+and+Bakery)/@29.6557358,-82.3282616,17z/data=!4m6!3m5!1s0x88e8a31e4b9456b9:0x67ece38feb391fee!8m2!3d29.6557358!4d-82.3282616" target="_blank" rel="noopener" aria-label="Flatfish GNV on Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 17.3-6.2 3.7 1.7-7-5.4-4.7 7.1-.6L12 2l2.8 6.7 7.1.6-5.4 4.7 1.7 7z"/></svg></a>
+      </div>
+    </div>
+    <div><h4>Eat</h4><ul>
+      <li><a href="menu.html">This fortnight&rsquo;s flavours</a></li>
+      <li><a href="menu.html#glazed">Plant-based glazed</a></li>
+      <li><a href="menu.html#dagel">The Dagel</a></li>
+      <li><a href="menu.html#past">Flavours we&rsquo;ve run</a></li>
+    </ul></div>
+    <div><h4>Visit</h4><ul>
+      <li><a href="visit.html">Hours &amp; directions</a></li>
+      <li><a href="visit.html#getting-there">From campus</a></li>
+      <li><a href="visit.html#tips">Beat the sellout</a></li>
+      <li><a href="https://www.google.com/maps/dir/?api=1&destination=Flatfish+GNV+308+NW+5th+Ave+Gainesville+FL+32601" target="_blank" rel="noopener">Open in Maps</a></li>
+    </ul></div>
+    <div><h4>More</h4><ul>
+      <li><a href="about.html">Our story</a></li>
+      <li><a href="reviews.html">Reviews (4.7&#9733;)</a></li>
+      <li><a href="https://www.instagram.com/flatfish_gnv/" target="_blank" rel="noopener">Instagram @flatfish_gnv</a></li>
+      <li><a href="https://www.facebook.com/FlatFishGNV/" target="_blank" rel="noopener">Facebook</a></li>
+    </ul></div>
+  </div>
+  <div class="foot__bar">
+    <span>&copy; 2026 Flatfish GNV. Baked in Gainesville, Florida.</span>
+    <span>Saturday &amp; Sunday, 10am – 1:30pm or sellout</span>
+  </div>
+</div></footer>
+<script>
+(function(){
+  var t=document.getElementById('navtoggle'),n=document.getElementById('nav');
+  if(t&&n){t.addEventListener('click',function(){
+    var o=n.classList.toggle('is-open');t.setAttribute('aria-expanded',o?'true':'false');
+  });}
+  // mark today's row in any hours table, and say whether the door is open
+  var d=new Date(),day=d.getDay(),rows=document.querySelectorAll('[data-day]');
+  rows.forEach(function(r){ if(+r.dataset.day===day) r.classList.add('is-today'); });
+  var live=document.getElementById('open-now');
+  if(live){
+    var mins=d.getHours()*60+d.getMinutes(), weekend=(day===0||day===6);
+    var open=weekend&&mins>=600&&mins<810;
+    live.textContent=open?'Open now until 1:30pm':(weekend?'Closed for today':'Closed — back Saturday 10am');
+    live.className='chip '+(open?'chip--open':'chip--shut');
+  }
+})();
+</script>
+</body>
+</html>
